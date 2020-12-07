@@ -59,13 +59,17 @@ select {
     margin-bottom: 25px;
     background-color: #e0e0eb;
     margin-bottom: 35px;
-
+    width: 100%;
 }
 
 input[type="radio"],
 input[type="checkbox"] {
     margin: 0 5px 10px 0;
+}
 
+#zip {
+    width: 50%;
+    float: left;
 }
 
 fieldset {
@@ -127,6 +131,7 @@ button {
     border-radius: 10px; 
     margin-bottom: 20px; 
     border: none;
+    width: 100%;
 }
 
 #req {
@@ -136,6 +141,11 @@ button {
 
 }
 
+input[placeholder] {
+    text-align-last: right;
+    font-style: italic;
+}
+
 /* Footer Styles */
 
 footer {
@@ -143,7 +153,13 @@ footer {
     font-style: italic;
 }
 
-/* Focus state Styles */
+/* Focus State/CSS Transition Styles */
+
+input,
+textarea {
+    transition: outline 0.5s, background-color 0.5s, transform 1s;
+    transition-timing-function: ease-in-out;
+}
 
 input:focus,
 textarea:focus {
@@ -153,24 +169,8 @@ textarea:focus {
 
 
 
-/* Media Queries for 767px and below */
-
-@media (max-width: 767px) {
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    textarea, 
-    select {
-        width: 100%;
-     
-    }
-
-    button {
-        width: 100%;
-    }
-
 /* Media Queries for 768px and above */
-}
+
 
 @media (min-width: 768px) {
 
@@ -181,11 +181,14 @@ textarea:focus {
 
     input[type="text"],
     input[type="email"],
-    input[type="tel"],
-    textarea, 
+    input[type="tel"], 
     select {
         width: 65%;
      
+    }
+
+    textarea {
+        width: 100%;
     }
 
     form {
@@ -208,9 +211,14 @@ textarea:focus {
     }
 
     button {
-        width: 70%;
-        margin-left: 17.5%;
+        width: 100%;
         max-width: 800px;
+    }
+
+    #zip {
+        display: block;
+        margin-left: 22%;
+        max-width: 150px;
     }
 
 }
