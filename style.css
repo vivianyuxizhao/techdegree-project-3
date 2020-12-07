@@ -46,6 +46,16 @@ h2, p {
 
 }
 
+
+fieldset {
+    border: none;
+
+}
+
+.form_div {
+    border-top: 5px solid #4d004d;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -67,24 +77,20 @@ input[type="checkbox"] {
     margin: 0 5px 10px 0;
 }
 
-#zip {
-    width: 50%;
-    float: left;
-}
-
-fieldset {
-    border: none;
-
-}
-
-.form_div {
-    border-top: 5px solid #4d004d;
-}
-
 input[type="radio"],
 input[type="checkbox"] {
     margin: 0 5px 5px 0; 
     
+}
+
+input[placeholder] {
+    text-align-last: right;
+    font-style: italic;
+}
+
+#zip {
+    width: 50%;
+    float: left;
 }
 
 select {
@@ -141,10 +147,6 @@ button {
 
 }
 
-input[placeholder] {
-    text-align-last: right;
-    font-style: italic;
-}
 
 /* Footer Styles */
 
@@ -166,7 +168,6 @@ textarea:focus {
     background-color: #e6e6ff;
     outline: 2px dashed #ff66b3;
 }
-
 
 
 /* Media Queries for 768px and above */
@@ -217,8 +218,8 @@ textarea:focus {
 
     #zip {
         display: block;
-        margin-left: 22%;
+        margin-left: 140px;
         max-width: 150px;
     }
-
+    
 }
